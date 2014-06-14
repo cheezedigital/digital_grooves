@@ -1,23 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>DigitalGrooves</title>
+  <link href='http://fonts.googleapis.com/css?family=Audiowide|Nunito' rel='stylesheet' type='text/css'>
+  <title>Digital|Grooves</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
   <nav>
-    <%= link_to('Home', root_path) %>
+    <%= link_to('Home', root_path, class: "links") %>
     <span>&nbsp;|&nbsp;</span>
-    <%= link_to('About', about_path) %>
+    <%= link_to('About', about_path, class: "links") %>
     <span>&nbsp;|&nbsp;</span>
-    <%= link_to('Items', items_path) %>
+    <%= link_to('Tracks', items_path, class: "links") %>
   </nav>
- <%= yield %>
+  <div id="wrapper">
+    <header>
 
-  <footer>
-    copyright &copy; <%= Time.now.year %>
-  </footer>
+    </header>
+    <section id="main-content">
+<%= yield %>
+    </section>
+    <footer>
+      copyright &copy; <%= Time.now.year %>
+    </footer>
+  </div>
 </body>
 </html>

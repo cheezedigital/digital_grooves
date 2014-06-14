@@ -13,3 +13,64 @@
  *= require_tree .
  *= require_self
  */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+  nav {
+    text-align: center;
+    padding: 10px 0;
+    margin: 10px 0 0;
+    color: red;
+  }
+  .links {
+    font-size: 20px;
+    text-decoration: none;
+    font-family: 'Nunito', sans-serif;
+  }
+  .link {
+    font-size: 20px;
+    text-decoration: none;
+    font-family: 'Nunito', sans-serif;
+    text-align: center;
+    padding: 10px;
+    color: white;
+  }
+  p {
+    color: white;
+    font-size: 25px;
+    padding: 100px;
+    text-align: center;
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.9);
+
+  }
+
+  h1 {
+    color: white;
+    font-family: 'Audiowide', cursive;
+    font-size:35px;
+    text-align: center;
+    margin-top: 10px;
+    text-shadow: 2px 4px 3px rgba(255,255,255,0.4);
+    background-color: black;
+    line-height: 1.5em;
+  }
+
+  body {
+    font-family: 'Nunito', sans-serif;
+    font-size: 14px;
+    background: transparent url('renzler.gif') repeat scroll center center;
+  }
+
+  footer {
+    margin-top: 20px;
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid #aaaaaa;
+    font-size: 12px;
+    color: white;
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+  }

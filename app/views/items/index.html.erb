@@ -1,5 +1,5 @@
 
-<h1> Index </h1>
+<h1>Track List</h1>
 
 
 
@@ -8,10 +8,12 @@
 <ul>
 <% @items.each do |item| %>
   <li>
-    <%=item.name %>
-    <%=item.price %>
+    <%= item.name %>
+    <%= item.price %>
+    <%= link_to('Destroy', item_path(item.id), method: :delete, 'data-confirm' => 'Are you sure?') %>
   </li>
   <% end %>
 </ul>
 
-<%= link_to('Create a new item', new_item_path) %>
+
+<%= link_to('Add a new track!', new_item_path, class: "link") %>
