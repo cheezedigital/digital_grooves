@@ -14,3 +14,7 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+function resort(select) {
+  window.location = "/items?order=" + select.value
+}

@@ -5,7 +5,16 @@
 
 
 
-<ul>
+    <label>Sort by: </label>
+    <select name="stuff" onchange="resort(this)">
+      <% @choice.each do |c|%>
+          <option value="<%= c %>"><%= c %></option>
+      <% end %>
+    </select>
+
+
+
+<ul onload="fnDraw()">
 <% @items.each do |item| %>
   <li>
     <%= item.name %>
