@@ -5,16 +5,15 @@
 
 
     <label>Sort by: </label>
-    <select name="stuff">
+    <select name="stuff" onchange="resort(this)">
       <% @choice.each do |c|%>
           <option value="<%= c %>"><%= c %></option>
       <% end %>
     </select>
 
-          <% sorter %>
 
 
-<ul>
+<ul onload="fnDraw()">
 <% @items.each do |item| %>
   <li>
     <%=item.name %>
@@ -22,12 +21,3 @@
   </li>
   <% end %>
 </ul>
-
-
-    <label>Programming Language:</label>
-    <select name="language">
-      <option value="Ruby">Ruby</option>
-      <option value="JavaScript">JavaScript</option>
-      <option value="Whiespace"></option>
-      <option value="BrainF**k">>><<+\|</option>
-    </select>
