@@ -5,38 +5,35 @@ class ItemsController < ApplicationController
     end
 
   def create
-    @item = Item.create
+    @item = Item.new(params[:item])
+    @item.save
+    redirect_to @item
   end
 
   def new
-    @item = Item.new(item_params)
-    if @item.save
-      redirect_to item_path
-    else
-      render.new
-    end
+    @item = Item.new
   end
 
-    def show
+  def show
 
+  end
+
+  def edit
+
+  end
+
+  def update
+    if @item.update_attributes(item_params)
+       redirect_to products_path
+    else
+      render :edit
     end
-
-    def edit
-
-    end
-
-    def update
-      if @item.update_attributes(item_params)
-        redirect_to products_path
-      else
-        render :edit
-      end
-    end
+  end
 
     private
 
     def find_item
       @item = Item.find(params[:id])
     end
->>>>>>> master
+
 end
