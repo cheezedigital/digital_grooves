@@ -2,6 +2,7 @@ class ItemsController < ApplicationController
   before_action :find_product, only: [:show, :edit, :update, :destroy]
     def index
       @items = Item.all
+      @choice = ['A - Z', "Z - A", "Highest - Lowest Price", "Lowest - Highest Price"]
     end
 
     def show

@@ -4,6 +4,16 @@
 
 
 
+    <label>Sort by: </label>
+    <select name="stuff">
+      <% @choice.each do |c|%>
+          <option value="<%= c %>"><%= c %></option>
+      <% end %>
+    </select>
+
+          <% sorter %>
+
+
 <ul>
 <% @items.each do |item| %>
   <li>
@@ -12,3 +22,12 @@
   </li>
   <% end %>
 </ul>
+
+
+    <label>Programming Language:</label>
+    <select name="language">
+      <option value="Ruby">Ruby</option>
+      <option value="JavaScript">JavaScript</option>
+      <option value="Whiespace"></option>
+      <option value="BrainF**k">>><<+\|</option>
+    </select>
