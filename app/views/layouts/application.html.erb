@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>DigitalGrooves</title>
+  <link href='http://fonts.googleapis.com/css?family=Audiowide|Nunito' rel='stylesheet' type='text/css'>
+  <title>Digital|Grooves</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+<<<<<<< Updated upstream
   <nav>
     <%= link_to('Home', root_path) %>
     <span>&nbsp;|&nbsp;</span>
@@ -19,5 +21,18 @@
   <footer>
     copyright &copy; <%= Time.now.year %>
   </footer>
+=======
+  <div id="wrapper">
+    <header>
+
+    </header>
+    <section id="main-content">
+<%= yield %>
+    </section>
+    <footer>
+      copyright &copy; <%= Time.now.year %>
+    </footer>
+  </div>
+>>>>>>> Stashed changes
 </body>
 </html>
