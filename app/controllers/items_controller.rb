@@ -17,10 +17,11 @@ class ItemsController < ApplicationController
         render :edit
       end
     end
-    
-    private
 
+    private
+    
     def find_item
       @item = Item.find(params[:id])
     end
+
 end
