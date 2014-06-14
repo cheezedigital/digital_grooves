@@ -7,8 +7,17 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <nav>
+    <%= link_to('Home', root_path) %>
+    <span>&nbsp;|&nbsp;</span>
+    <%= link_to('About', about_path) %>
+    <span>&nbsp;|&nbsp;</span>
+    <%= link_to('Items', items_path) %>
+  </nav>
+ <%= yield %>
 
-<%= yield %>
-
+  <footer>
+    copyright &copy; <%= Time.now.year %>
+  </footer>
 </body>
 </html>
