@@ -1,10 +1,11 @@
 class ItemsController < ApplicationController
   before_action :find_product, only: [:show, :edit, :update, :destroy]
-    def new
+    def index
       @items = Item.all
     end
 
     def show
+      find_item
     end
 
     def edit
@@ -19,7 +20,7 @@ class ItemsController < ApplicationController
     end
 
     private
-    
+
     def find_item
       @item = Item.find(params[:id])
     end
