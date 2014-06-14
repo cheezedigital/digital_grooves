@@ -1,23 +1,36 @@
 class ItemsController < ApplicationController
   before_action :find_product, only: [:show, :edit, :update, :destroy]
-    def index
-      @items = Item.all
-    end
 
-    def show
-      find_item
-    end
+  def index
+    @items = Item.all
+  end
 
-    def edit
-    end
+  def create
+    @item = Item.new(params[:item])
+    @item.save
+    redirect_to @item
+  end
 
-    def update
-      if @item.update_attributes(item_params)
-        redirect_to products_path
-      else
-        render :edit
-      end
+
+  def new
+    @item = Item.new
+  end
+
+  def show
+
+  end
+
+  def edit
+
+  end
+
+  def update
+    if @item.update_attributes(item_params)
+       redirect_to products_path
+    else
+      render :edit
     end
+  end
 
     private
 
